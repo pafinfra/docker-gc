@@ -1,4 +1,4 @@
-@Library('paf-jenkins@docker-pipeline-publish-only-master') import com.paf.pipeline.docker.*
+@Library('paf-jenkins@v0.3.109') import com.paf.pipeline.docker.*
 
 Configuration config = Configuration.builder()
                                     .useEmptyBranchAsMaster()
