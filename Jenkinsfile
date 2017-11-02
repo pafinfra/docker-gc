@@ -1,4 +1,8 @@
-@Library('paf-jenkins@v0.2.100') import com.paf.pipeline.docker.DockerImagePipeline
+@Library('paf-jenkins@docker-pipeline-publish-only-master') import com.paf.pipeline.docker.*
 
-DockerImagePipeline.defaultPipeline(this).execute()
+Configuration config = Configuration.builder()
+                                    .useEmptyBranchAsMaster()
+                                    .build()
+
+DockerImagePipeline.defaultPipeline(this, config).execute()
 
